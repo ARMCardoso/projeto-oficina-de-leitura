@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="meu-estilo.css">
+    <link rel="stylesheet" href="css/tooltipster.bundle.min.css">
+    <title>Cofre</title>
+  </head>
+  <body>
+    <div id="cofre">
+      <form id="form-cofre" autocomplete="off">
+        <input type="password" id="senha-cofre" placeholder="Insira a senha">
+        <button type="submit" id="botao-cofre">Abrir Cofre</button>
+        <div id="mensagem-erro" style="display:none; margin-top: 10px;">
+          <p>Senha incorreta. Tente novamente.</p>
+        </div>
+      </form>
+      <div id="mensagem-secreta" style="display:none;">
+        <p>Esta é a mensagem secreta!</p>
+      </div>
+      <a href="#" class="tooltip-custom tooltipster-noir-customized dica-1" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante 
+        ut tellus rutrum egestas. Phasellus consectetur tincidunt quam 
+        id iaculis. Praesent bibendum ipsum sit amet dolor venenatis 
+        iaculis. Donec dictum libero vitae odio auctor, vel 
+        pellentesque urna fringilla. Nulla facilisi. Morbi 
+        hendrerit faucibus augue, quis consequat sapien ultrices in.">Dica 1</a>
+      <a href="#" class="tooltip-custom tooltipster-noir-customized dica-2" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante 
+        ut tellus rutrum egestas. Phasellus consectetur tincidunt quam 
+        id iaculis. Praesent bibendum ipsum sit amet dolor venenatis 
+        iaculis. Donec dictum libero vitae odio auctor, vel 
+        pellentesque urna fringilla. Nulla facilisi. Morbi 
+        hendrerit faucibus augue, quis consequat sapien ultrices in.">Dica 2</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+    <script src="cofralog.js"></script>
+  </body>
+</html>
