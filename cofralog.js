@@ -30,5 +30,8 @@ $(document).ready(function() {
 });
 
 $('.tooltip-custom').tooltipster({
-  theme: ['tooltipster-noir', 'tooltipster-noir-customized']
+  theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
+  animation: 'fall',
+  arrow: false,
+  maxWidth: '50px'
 });

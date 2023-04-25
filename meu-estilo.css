@@ -4,29 +4,22 @@
 }
 
 body {
-    zoom: 1.4;
-    -moz-transform: scale(2.4);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(2.4);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(2.4);
-    -webkit-transform-origin: 0 0;
-  }
+  transform: scale(2.4);
+  transform-origin: 0 0;
+}
 
 /* This is how you would create a custom secondary theme on top of tooltipster-noir: */
 .tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
-	background: grey;
-	border-radius: 6px;
+	background: transparent !important;
+	border-radius: 0px;
 	box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.4);
+  width: 300px;
+  position: absolute !important;
 }
 .tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
-	color: rgb(7, 7, 58);
+	color: rgb(253, 253, 255);
 	padding: 8px;
 }
-
-.tooltipster-base.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized.tooltipster-fade.tooltipster-fade-show .tooltipster-box {
-    top: 20px;
-  }
 
 #senha-cofre {
   margin-bottom: 50px;
@@ -37,7 +30,6 @@ body {
   text-decoration: none;
   font-family: "JetBrainsMono Nerd Font";
   color: blue;
-
 }
 
 .tooltip-custom.dica-1 {
