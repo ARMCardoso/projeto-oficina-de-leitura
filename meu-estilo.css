@@ -3,6 +3,16 @@
   background-color: hsl(214, 14%, 10%) !important;
 }
 
+body {
+    zoom: 1.4;
+    -moz-transform: scale(2.4);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(2.4);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(2.4);
+    -webkit-transform-origin: 0 0;
+  }
+
 /* This is how you would create a custom secondary theme on top of tooltipster-noir: */
 .tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
 	background: grey;
@@ -27,6 +37,7 @@
   text-decoration: none;
   font-family: "JetBrainsMono Nerd Font";
   color: seagreen;
+
 }
 
 .tooltip-custom.dica-1 {
