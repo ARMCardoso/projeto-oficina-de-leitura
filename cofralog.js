@@ -41,6 +41,8 @@ $('.tooltip-custom').tooltipster({
     var content = $(helper.origin).attr('title'); // obtém o conteúdo da tooltip
     $(helper.tooltip).html(content); // define o conteúdo da tooltip
     $(helper.origin).removeAttr('title'); // remove o atributo title para evitar o texto padrão
+    $(helper.origin).on('touchend', function() {
+      instance.close(); // evita que a tooltip seja fechada automaticamente no celular
+    });
   }
-});
-
+})
