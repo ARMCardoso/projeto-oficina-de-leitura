@@ -38,11 +38,10 @@ $('.tooltip-custom').tooltipster({
   theme: 'tooltipster-noir-customized',
   contentAsHTML: true, // indica que o conteúdo deve ser tratado como HTML
   functionInit: function(instance, helper) {
-    var content = $(helper.origin).attr('title'); // obtém o conteúdo da tooltip
+    var content = $(helper.origin).data('tooltip-content'); // obtém o conteúdo da tooltip a partir do atributo data-tooltip-content
     $(helper.tooltip).html(content); // define o conteúdo da tooltip
-    $(helper.origin).removeAttr('title'); // remove o atributo title para evitar o texto padrão
     $(helper.origin).on('touchend', function() {
-      instance.close(); // evita que a tooltip seja fechada automaticamente no celular
+    instance.close(); // evita que a tooltip seja fechada automaticamente no celular
     });
   }
 })
