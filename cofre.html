@@ -10,27 +10,42 @@
       <form id="form-cofre" autocomplete="off">
         <input type="password" id="senha-cofre" placeholder="Insira a senha">
         <button type="submit" id="botao-cofre">Abrir Cofre</button>
-        <div id="mensagem-erro" style="display:none; margin-top: -60px; margin-bottom: 24px">
+        <div id="mensagem-erro" style="display:none; margin-top: -60px; margin-bottom: 25px">
           <p>Senha incorreta. Tente novamente.</p>
         </div>
+        <div id="mensagem-secreta" style="display:none; margin-top: -60px; margin-bottom: 25px;">
+          <p>Esta é a mensagem secreta!</p>
+        </div>
       </form>
-      <div id="mensagem-secreta" style="display:none; margin-top: -60px; margin-bottom: 24px">
-        <p>Esta é a mensagem secreta!</p>
+      <div class="container">
+        <a href="#" class="tooltip-custom tooltipster-noir-customized dica-1" data-tooltip-content='<span style="line-height: 1.5;">Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit. Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante ut tellus rutrum egestas. 
+          Phasellus consectetur tincidunt quam id iaculis. Praesent bibendum ipsum sit amet dolor venenatis iaculis. 
+          Donec dictum libero vitae odio auctor, vel pellentesque urna fringilla. Nulla facilisi. Morbi hendrerit faucibus augue, 
+          quis consequat sapien ultrices in, Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante ut tellus rutrum egestas. 
+          Phasellus consectetur tincidunt quam id iaculis. Praesent bibendum ipsum sit amet dolor venenatis iaculis. 
+          Donec dictum libero vitae odio auctor, vel pellentesque urna fringilla. Nulla facilisi. Morbi hendrerit faucibus augue.Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante ut tellus rutrum egestas. 
+          Phasellus consectetur tincidunt quam id iaculis. Praesent bibendum ipsum sit amet dolor venenatis iaculis. 
+          Donec dictum libero vitae odio auctor, vel pellentesque urna fringilla. Nulla facilisi. Morbi hendrerit faucibus augue,Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante ut tellus rutrum egestas. 
+          Phasellus consectetur tincidunt quam id iaculis. Praesent bibendum ipsum sit amet dolor venenatis iaculis. 
+          Donec dictum libero vitae odio auctor, vel pellentesque urna fringilla. Nulla facilisi. Morbi hendrerit faucibus augue,Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante ut tellus rutrum egestas. 
+          Phasellus consectetur tincidunt quam id iaculis. Praesent bibendum ipsum sit amet dolor venenatis iaculis. 
+          Donec dictum libero vitae odio auctor, vel pellentesque urna fringilla. Nulla facilisi. Morbi hendrerit faucibus augue,</span>'>Dica 1</a>
+        <a href="#" class="tooltip-custom tooltipster-noir-customized dica-2" data-tooltip-content='<span style="line-height: 1.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante ut tellus rutrum egestas. Phasellus consectetur tincidunt quam id iaculis. Praesent bibendum ipsum sit amet dolor venenatis iaculis. Donec dictum libero vitae odio auctor, vel pellentesque urna fringilla. Nulla facilisi. Morbi hendrerit faucibus augue, quis consequat sapien ultrices in.</span>'>Dica 2</a>
       </div>
-      <a href="#" class="tooltip-custom tooltipster-noir-customized dica-1" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante 
-        ut tellus rutrum egestas. Phasellus consectetur tincidunt quam 
-        id iaculis. Praesent bibendum ipsum sit amet dolor venenatis 
-        iaculis. Donec dictum libero vitae odio auctor, vel 
-        pellentesque urna fringilla. Nulla facilisi. Morbi 
-        hendrerit faucibus augue, quis consequat sapien ultrices in.">Dica 1</a>
-      <a href="#" class="tooltip-custom tooltipster-noir-customized dica-2" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed volutpat tellus vel tellus bibendum eleifend. Vivamus in ante 
-        ut tellus rutrum egestas. Phasellus consectetur tincidunt quam 
-        id iaculis. Praesent bibendum ipsum sit amet dolor venenatis 
-        iaculis. Donec dictum libero vitae odio auctor, vel 
-        pellentesque urna fringilla. Nulla facilisi. Morbi 
-        hendrerit faucibus augue, quis consequat sapien ultrices in.">Dica 2</a>
+      
+      <script>
+        $(document).ready(function() {
+          $('.tooltip-custom').tooltipster({
+            theme: 'tooltipster-noir-customized',
+            contentAsHTML: true,
+            functionBefore: function(instance, helper) {
+              var content = $(helper.origin).data('tooltip-content');
+              $(helper.tooltip).html(content);
+            },
+          });
+        }); 
+      </script>
     </div>
 
     <!-- JavaScript -->

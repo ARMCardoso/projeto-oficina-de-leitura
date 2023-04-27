@@ -25,13 +25,22 @@ formCofre.addEventListener('submit', function(event) {
   }
 });
 
-$(document).ready(function() {
-  $('.tooltip').tooltipster();
+$('.tooltip-custom').tooltipster({
+  theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
+  animation: 'slide',
+  arrow: false,
+  trigger: 'click',
+  trackTooltip: true,
+  position: 'top'
 });
 
 $('.tooltip-custom').tooltipster({
-  theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
-  animation: 'fall',
-  arrow: false,
-  maxWidth: '50px'
+  theme: 'tooltipster-noir-customized',
+  contentAsHTML: true, // indica que o conteúdo deve ser tratado como HTML
+  functionInit: function(instance, helper) {
+    var content = $(helper.origin).attr('title'); // obtém o conteúdo da tooltip
+    $(helper.tooltip).html(content); // define o conteúdo da tooltip
+    $(helper.origin).removeAttr('title'); // remove o atributo title para evitar o texto padrão
+  }
 });
+
