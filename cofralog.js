@@ -38,7 +38,7 @@ $('.tooltip-custom').tooltipster({
   },
   triggerClose: {
     click: true,
-    tap: true
+    tap: false
   }
 });  
 
