@@ -29,7 +29,7 @@ $('.tooltip-custom').tooltipster({
   theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
   animation: 'slide',
   arrow: false,
-  trigger: 'click',
+  trigger: ['click','touch'],
   trackTooltip: true,
   position: 'top',
   functionBefore: function(instance, helper) {
