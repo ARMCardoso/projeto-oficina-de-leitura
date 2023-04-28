@@ -39,7 +39,8 @@ $('.tooltip-custom').tooltipster({
   triggerClose: {
     click: true,
     tap: false
-  }
+  },
+  mobileTouch: true
 });  
 
 
