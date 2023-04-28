@@ -26,6 +26,7 @@ formCofre.addEventListener('submit', function(event) {
 });
 
 $('.tooltip-custom').tooltipster({
+  touchDevices: true,
   theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
   animation: 'slide',
   arrow: false,
