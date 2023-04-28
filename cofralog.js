@@ -6,7 +6,7 @@ const mensagemSecreta = document.getElementById('mensagem-secreta');
 const mensagemErro = document.getElementById('mensagem-erro');
 
 // Definir a senha correta
-const senhaCorreta = '1234';
+const senhaCorreta = '11114242515';
 
 // Definir o manipulador de eventos para o envio do formulário
 formCofre.addEventListener('submit', function(event) {
