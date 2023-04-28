@@ -31,8 +31,18 @@ $('.tooltip-custom').tooltipster({
   arrow: false,
   trigger: 'click',
   trackTooltip: true,
-  position: 'top'
-});
+  position: 'top',
+  functionBefore: function(instance, helper) {
+  var content = $(helper.origin).data('tooltip-content');
+  $(helper.tooltip).html(content);  
+  // adia o fechamento automático da tooltip em dispositivos móveis
+    if ('ontouchstart' in window) {
+      setTimeout(function() {
+        instance.close();
+      }, 3000); // ajuste o tempo de acordo com sua preferência
+    }
+  }
+});  
 
 $('.tooltip-custom').tooltipster({
   theme: 'tooltipster-noir-customized',
