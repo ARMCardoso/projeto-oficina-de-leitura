@@ -32,6 +32,8 @@ $('.tooltip-custom').tooltipster({
   arrow: false,
   trackTooltip: true,
   position: 'top',
+  interactive: true,
+  delay: [0, 3000],
   trigger: 'custom',
   triggerOpen: {
     click: true,
@@ -39,10 +41,8 @@ $('.tooltip-custom').tooltipster({
   },
   triggerClose: {
     click: true,
-    tap: false
+    tap: true
   },
-  mobileTouch: true,
-  delay: 3000
 });  
 
 
