@@ -29,19 +29,17 @@ $('.tooltip-custom').tooltipster({
   theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
   animation: 'slide',
   arrow: false,
-  trigger: 'click',
   trackTooltip: true,
   position: 'top',
+  trigger: 'custom',
+  triggerOpen: {
+    click: true,
+    tap: true
+  },
+  triggerClose: {
+    click: true,
+    tap: true
+  }
 });  
 
-$('.tooltip-custom').tooltipster({
-  theme: 'tooltipster-noir-customized',
-  contentAsHTML: true, // indica que o conteúdo deve ser tratado como HTML
-  functionInit: function(instance, helper) {
-    var content = $(helper.origin).data('tooltip-content'); // obtém o conteúdo da tooltip a partir do atributo data-tooltip-content
-    $(helper.tooltip).html(content); // define o conteúdo da tooltip
-    $(helper.origin).on('touchend', function() {
-    instance.close(); // evita que a tooltip seja fechada automaticamente no celular
-    });
-  }
-})
+
