@@ -4,23 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sexo</title>
+  <title>Projeto Oficina de Leitura</title>
+  <link rel="stylesheet" href="meu-estilo.css">
+  <link rel="stylesheet" href="css/tooltipster.bundle.min.css">
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
 </head>
-<body>
-  
-</body>
-</html>
-<html>
-  <head>
-    <link rel="stylesheet" href="meu-estilo.css">
-    <link rel="stylesheet" href="css/tooltipster.bundle.min.css">
-    <title>Cofre</title>
-  </head>
-  <body>
+
+<body id="background">
     <div id="cofre">
       <form id="form-cofre" autocomplete="off">
-        <input type="password" id="senha-cofre" placeholder="Insira a senha">
-        <button type="submit" id="botao-cofre">Abrir Cofre</button>
+        <input type="password" id="senha-cofre">
+        <button type="submit" id="botao-cofre"><p>Abrir Cofre</p></button>
         <div id="mensagem-erro" style="display:none; margin-top: -60px; margin-bottom: 25px">
           <p>Senha incorreta. Tente novamente.</p>
         </div>
@@ -59,9 +56,28 @@
       </script>
     </div>
 
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/tooltipster.bundle.min.js"></script>
     <script src="cofralog.js"></script>
+    <script>
+      // Adiciona event listener para o evento "keyup" no documento
+document.addEventListener('keyup', function(event) {
+  // Verifica se a tecla pressionada foi a tecla Esc
+  if (event.key === "Escape") {
+    // Fecha a caixa
+    $('.tooltip-custom').tooltipster('hide');
+  }
+});
+
+    </script>
+  <script>
+
+    var background = document.getElementById('background');
+    function changeColor() {
+      var colors = ['#ff124f', '#ff00a0', '#fe75fe', '#7a04eb'];
+      var randomColor = colors[Math.floor(Math.random() * colors.length)];
+      background.style.backgroundColor = randomColor;
+    }
+    
+    setInterval(changeColor, 100);
+    </script>
   </body>
 </html>
