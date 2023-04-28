@@ -34,15 +34,7 @@ $('.tooltip-custom').tooltipster({
   position: 'top',
   interactive: true,
   delay: [0, 3000],
-  trigger: 'custom',
-  triggerOpen: {
-    click: true,
-    tap: true
-  },
-  triggerClose: {
-    click: true,
-    tap: true
-  },
+  trigger: 'click',
 });  
 
 
