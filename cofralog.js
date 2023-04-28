@@ -41,7 +41,8 @@ $('.tooltip-custom').tooltipster({
     click: true,
     tap: false
   },
-  mobileTouch: true
+  mobileTouch: true,
+  delay: 3000
 });  
 
 
